@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOP-WATCH</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="main">
+        <div class="stopwatch" onclick="fun1('button-container1','button-container2')"><button><b>Stop-Watch</b></button></div>
+        <div class="timer" onclick="fun2('button-container3','button-container4')"><button><b>Timer</b></button></div>
+    </div>
+    <div class="button-container1">
+        <div class="hours" onclick="hours()">0</div>
+        <p>:</p>
+        <div class="minutes" onclick="minutes()">0</div>
+        <p>:</p>
+        <div class="seconds" onclick="seconds()">0</div>
+    </div>
+    <div class="button-container2">
+        <div class="start" onclick="start('button-container1')"><button>Start</button></div>
+        <div class="stop"  onclick="stop('button-container1')"><button>Stop</button></div>
+        <div class="reset" onclick="reset('button-container1')"><button>Reset</button></div>
+        <div class="back" onclick="back('button-container1')"><button>Back</button></div>
+    </div>
+    <div class="button-container3">
+        <input type="number" id="hours-input" placeholder="Enter Hours" min="0">
+        <p>:</p>
+        <input type="number" id="minutes-input" placeholder=" Enter Minutes" min="0">
+        <p>:</p>
+        <input type="number" id="seconds-input" placeholder="Enter Seconds" min="0">
+        <br>
+        <button onclick="startTimer()">Start Timer</button>
+    </div>
+    <div class="button-container4">
+        <div class="hours1">0</div>
+        <p>:</p>
+        <div class="minutes1">0</div>
+        <p>:</p>
+        <div class="seconds1">0</div>
+        <br>
+        <div class="stop"><button onclick="stopTimer()">Stop</button></div>
+        <div class="reset"><button onclick="resetTimer()">Reset</button></div>
+        <div class="back"><button onclick="goback()">Back</button></div>
+    </div>
+    
+   
+</body>
+<script src="./script.js"></script>
+</html>
